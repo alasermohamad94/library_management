@@ -41,3 +41,59 @@
             </div>
           </section>
         </aside>
+
+        
+        <main class="content">
+          <section class="card">
+            <h2><span class="icon">📘</span> إضافة كتاب</h2>
+            <form id="addBookForm" class="form-grid">
+              <input type="text" id="title" placeholder="عنوان الكتاب" required />
+              <input type="text" id="author" placeholder="اسم المؤلف" required />
+              <input type="text" id="category" placeholder="التصنيف" />
+              <button type="submit">إضافة</button>
+            </form>
+          </section>
+
+          <section class="card">
+            <h2><span class="icon">🔁</span> استعارة / إرجاع</h2>
+            <form id="loanForm" class="form-grid">
+              <input type="number" id="loanBookId" placeholder="رقم الكتاب" required />
+              <input type="text" id="memberName" placeholder="اسم العضو (للإعارة)" />
+              <div class="buttons">
+                <button type="button" id="borrowBtn">استعارة</button>
+                <button type="button" id="returnBtn">إرجاع</button>
+              </div>
+            </form>
+          </section>
+
+          <section class="card">
+            <h2><span class="icon">📚</span> قائمة الكتب</h2>
+            <div class="toolbar">
+              <input type="text" id="search" placeholder="بحث بالعنوان أو المؤلف" />
+              <button id="refreshBtn">تحديث</button>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>الرقم</th>
+                  <th>العنوان</th>
+                  <th>المؤلف</th>
+                  <th>التصنيف</th>
+                  <th>المستعير</th>
+                  <th>تاريخ الاستعارة</th>
+                  <th>تاريخ الانتهاء</th>
+                  <th>المتبقي</th>
+                  <th>الحالة</th>
+                  <th>إجراءات</th>
+                </tr>
+              </thead>
+              <tbody id="booksBody"></tbody>
+            </table>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
